@@ -10,11 +10,13 @@ public class ServicoTransacao
 
     private readonly Carteira _carteira;
     private readonly Cotacao _cotacao;
+    private readonly Extrato? _extrato;
 
-    public ServicoTransacao(Carteira carteira, Cotacao cotacao)
+    public ServicoTransacao(Carteira carteira, Cotacao cotacao, Extrato? extrato = null)
     {
         _carteira = carteira ?? throw new ArgumentNullException(nameof(carteira));
         _cotacao = cotacao ?? throw new ArgumentNullException(nameof(cotacao));
+        _extrato = extrato;
     }
 
     /// <summary>Compra BTC gastando o valor informado em BRL. Retorna a quantidade de BTC comprada.</summary>
@@ -31,6 +33,7 @@ public class ServicoTransacao
 
         _carteira.DebitarBrl(valorBrl);
         _carteira.CreditarBtc(quantidadeBtc);
+        _extrato?.Registrar(new Transacao(TipoTransacao.Compra, quantidadeBtc, valorBrl, _cotacao.PrecoAtual, DateTime.Now));
         return quantidadeBtc;
     }
 
@@ -48,6 +51,7 @@ public class ServicoTransacao
 
         _carteira.DebitarBtc(quantidadeBtc);
         _carteira.DepositarBrl(valorBrl);
+        _extrato?.Registrar(new Transacao(TipoTransacao.Venda, quantidadeBtc, valorBrl, _cotacao.PrecoAtual, DateTime.Now));
         return valorBrl;
     }
 }
