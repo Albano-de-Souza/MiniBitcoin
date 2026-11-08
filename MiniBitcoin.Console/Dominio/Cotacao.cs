@@ -1,4 +1,4 @@
-namespace MiniBitcoin;
+namespace MiniBitcoin.Dominio;
 
 /// <summary>
 /// Mantém o preço atual de 1 BTC em reais (simulado).

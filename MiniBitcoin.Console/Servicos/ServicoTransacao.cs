@@ -1,4 +1,6 @@
-namespace MiniBitcoin;
+using MiniBitcoin.Dominio;
+
+namespace MiniBitcoin.Servicos;
 
 /// <summary>
 /// Executa ordens de compra e venda de Bitcoin com base na cotação atual.

@@ -1,4 +1,6 @@
-namespace MiniBitcoin;
+using MiniBitcoin.Dominio;
+
+namespace MiniBitcoin.Servicos;
 
 /// <summary>
 /// Histórico de operações e cálculo do patrimônio consolidado.

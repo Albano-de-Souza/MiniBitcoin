@@ -1,3 +1,6 @@
+using MiniBitcoin.Dominio;
+using MiniBitcoin.Servicos;
+
 namespace MiniBitcoin.Tests;
 
 public class ExtratoTests

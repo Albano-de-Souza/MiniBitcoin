@@ -1,3 +1,5 @@
+using MiniBitcoin.Dominio;
+
 namespace MiniBitcoin.Tests;
 
 public class CarteiraTests

@@ -1,4 +1,4 @@
-namespace MiniBitcoin;
+namespace MiniBitcoin.Dominio;
 
 /// <summary>
 /// Carteira com saldo em reais (BRL) e em Bitcoin (BTC).

@@ -1,4 +1,4 @@
-namespace MiniBitcoin;
+namespace MiniBitcoin.Dominio;
 
 public enum TipoTransacao
 {

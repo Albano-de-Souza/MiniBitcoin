@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text;
-using MiniBitcoin;
+using MiniBitcoin.Dominio;
+using MiniBitcoin.Servicos;
 
 Console.OutputEncoding = Encoding.UTF8;
 
